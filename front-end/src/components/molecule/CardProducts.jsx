@@ -5,6 +5,14 @@ import Button from "../atom/Button";
 const CardProducts = () => {
   const products = useSelector((state) => state.product.products);
   //   const dispatch = useDispatch();
+
+  const formatPrice = (price) => {
+    return new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      minimumFractionDigits: 0,
+    }).format(price);
+  };
   return (
     <>
       {products.length === 0 ? (
@@ -24,7 +32,7 @@ const CardProducts = () => {
 
               <section className="p-3 flex flex-col gap-y-1 items-center">
                 <h1 className="text-xl font-bold">{item.name_product}</h1>
-                <p className="text-2xl font-bold">{item.price}</p>
+                <p className="text-2xl font-bold">{formatPrice(item.price)}</p>
                 <span>{item.stok}</span>
               </section>
 
