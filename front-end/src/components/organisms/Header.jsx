@@ -12,10 +12,6 @@ const Header = () => {
           <Link to="/add-product/add">
             <li className="text-2xl">Tambah Data</li>
           </Link>
-          <span className="text-2xl">|</span>
-          <Link to="/list-api">
-            <li className="text-2xl">List Api</li>
-          </Link>
         </ul>
       </nav>
     </header>

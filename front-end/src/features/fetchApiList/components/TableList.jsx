@@ -1,24 +1,16 @@
-import { useState, useEffect } from "react";
+import UseFetch from "../hooks/UseFetch";
 
 const TableList = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch("https://pokeapi.co/api/v2/ability");
-      setData(response?.results);
-      console.log(response.results.name);
-    };
-
-    fetchData();
-  }, []);
+  const { dataList } = UseFetch;
   return (
     <main>
-      {data.map((item, index) => (
-        <div key={index}>
-          <h1>{item.name}</h1>
-        </div>
-      ))}
+      {dataList.map((item) => {
+        return (
+          <div>
+            <h1>{item.name}</h1>
+          </div>
+        );
+      })}
     </main>
   );
 };
