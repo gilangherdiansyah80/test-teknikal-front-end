@@ -6,6 +6,7 @@ import MainLayout from "../components/tamplates/MainLayout";
 import AddProductPage from "../pages/AddProductPage";
 import UpdateProductPage from "../pages/UpdateProductPage";
 import FetchApiListPage from "../pages/FetchApiListPage";
+import FetchDetailPage from "../pages/FetchDetailPage";
 
 const AppRouter = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const AppRouter = createBrowserRouter([
     children: [
       { path: "home", element: <HomePage /> },
       { path: "list-api", element: <FetchApiListPage /> },
+      { path: "detail-api", element: <FetchDetailPage /> },
       { path: "add-product/:mode", element: <AddProductPage /> },
       { path: "update-product/:mode/:id", element: <UpdateProductPage /> },
     ],

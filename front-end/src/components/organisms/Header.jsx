@@ -16,6 +16,10 @@ const Header = () => {
           <Link to="/list-api">
             <li className="text-2xl">List Api</li>
           </Link>
+          <span className="text-2xl">|</span>
+          <Link to="/detail-api">
+            <li className="text-2xl">Detail Api</li>
+          </Link>
         </ul>
       </nav>
     </header>
